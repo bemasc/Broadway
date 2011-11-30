@@ -1,0 +1,6 @@
+[submodule "vp8/libvpx"]
+	path = vp8/libvpx
+	url = https://Benjamin.M.Schwartz@code.google.com/r/benjaminmschwartz-libvpx-emscripten/
+[submodule "vp8/nestegg"]
+	path = vp8/nestegg
+	url = git@github.com:bemasc/nestegg.git

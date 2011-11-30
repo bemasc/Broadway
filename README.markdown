@@ -1,3 +1,9 @@
+Route9.js
+=========
+A JavaScript VP8/Webm decoder, currently pre-alpha.  Produced by
+compiling libvpx and libnestegg into javascript using emscripten.
+Based on the build system and infrastructure of Broadway.js.
+
 Broadway.js
 ===========
 A JavaScript H.264 decoder.

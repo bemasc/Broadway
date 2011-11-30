@@ -1,0 +1,27 @@
+To fetch the dependencies:
+git submodule init
+git submodule update
+
+To compile libnestegg:
+cd nestegg/
+autoreconf --install
+(EMSCRIPTEN_ROOT=...) (PATH/TO/)emconfiguren.py ./configure
+make
+
+To compile libvpx:
+cd libvpx
+(PATH=$PATH:~/local_clang/bin/) ./configure --disable-vp8-encoder --disable-examples --disable-multithread --target=js1-none-clang_emscripten
+(PATH=$PATH:~/local_clang/bin/) make
+
+To build the javascript decoder:
+Install the closure compiler (http://code.google.com/closure/compiler/)
+and edit ~/.emscripten to point to the correct path.
+(EMSCRIPTEN_ROOT=...) python make.py
+(If you have RELOOP=1 in make.py, you may now watch the director's cut of
+a James Cameron movie while you wait.  I recommend The Abyss, for its
+excellent depiction of the Mammalian Diving Reflex and hypothermic
+neuroprotection.)
+
+To test the decoder:
+cp js/vp8.cc.js ../Demo/route9.js
+Open route9.html in your favorite modern browser.
